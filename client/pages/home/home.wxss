@@ -1,0 +1,145 @@
+/* pages/home/home.wxss */
+
+page {
+  width: 100%;
+}
+
+/**
+ * 焦点图区域
+ */
+
+.hot-menu {
+  position: relative;
+  margin: 50rpx;
+  height: 350rpx;
+  border-radius: 15rpx;
+  box-shadow: rgba(150, 150, 150, 0.664) 3rpx 3rpx 9rpx;
+  background-color: white;
+}
+
+.hot-name {
+  display: flex;
+  margin-left: 50rpx;
+  padding-top: 40rpx;
+  align-items: center;
+}
+
+.hot-name-text {
+  margin: 0 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.line-red {
+  height: 39rpx;
+  width: 24rpx;
+}
+
+.hot-goods {
+  height: 241rpx;
+  width: 241rpx;
+  float: right;
+  margin-right: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.hot-discount {
+  height: 188rpx;
+  width: 259rpx;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 40rpx;
+}
+
+/**
+ * 分隔栏区域
+ */
+
+ .space-bar{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top:80rpx;
+   margin-bottom: 50rpx;
+ }
+
+ .space-bar-text{
+   margin: 0 20rpx;
+   font-size: 30rpx;
+   font-weight: bold;
+ }
+
+ .line-black{
+   width: 21rpx;
+   height: 34rpx;
+ }
+
+ /**
+  * 商品列表区域
+  */
+
+  .goods-wrapper{
+    margin: 0 50rpx;
+  }
+  
+  .goods-bList{
+    display: flex;
+    justify-content: space-around;
+    margin: 30rpx 0;
+  }
+  
+  .goods-sList{
+    flex: 1;
+    border-radius: 15rpx;
+    box-shadow: rgba(150, 150, 150, 0.664) 3rpx 3rpx 9rpx;
+    background-color: white; 
+  }
+
+  .goods-sList:first-child{
+    margin-right: 30rpx;
+  }
+      
+  .goods-image{
+    width: 100%;
+    border-radius: 15rpx 15rpx 0 0;
+    height: 280rpx;
+  }
+      
+  .goods-name{
+    margin-left: 21rpx;
+    font-size: 30rpx;
+    color: rgba(29, 29, 38, 0.8);
+  }
+  
+  .goods-label{
+    display: flex;
+    align-items: center;
+    margin: 9rpx 21rpx 15rpx;
+  }
+  
+  .rmb,.goods2trolley{
+    border-radius: 50%;
+    background-color: #f9e777;
+    height: 36rpx;
+    width: 36rpx;
+    line-height: 36rpx;
+    text-align:center;
+    color: #34373e;
+    font-weight: bold;
+  }
+
+  .rmb{
+    font-size: 28rpx;
+  }
+
+  .goods-price{
+    flex: 1;
+    font-size: 30rpx;
+    margin: 0 10rpx;
+  }
+  
+  .goods2trolley{
+    font-size: 32rpx;
+  }
+  
