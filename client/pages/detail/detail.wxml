@@ -1,11 +1,11 @@
 <!--pages/detail/detail.wxml-->
 <view class='product-card'>
-  <image class='product-image' src="https://product-1257864644.cos.ap-shanghai.myqcloud.com/product2.jpg" mode='aspectFit'></image>
-  <view class='product-name'>商品</view>
-  <view class='product-place'>国内·广东</view>
+  <image class='product-image' src="{{imageAddress}}" mode='aspectFit'></image>
+  <view class='product-name'>{{productName}}</view>
+  <view class='product-place'>{{productSource}}</view>
   <view class='product-label'>
     <view class='rmb'>￥</view>
-    <view class='product-price'>480.5</view>
+    <view class='product-price'>{{productPrice}}</view>
   </view>
 </view>
 

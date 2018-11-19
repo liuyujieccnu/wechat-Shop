@@ -1,6 +1,7 @@
 <!--pages/home/home.wxml-->
 <image class='bg' src='../../images/bg.png'></image>
-<view class='hot-menu'>
+
+<navigator class='hot-menu' url="/pages/detail/detail?id=1">
   <view class='hot-name'>
     <image class='line-red' src='../../images/line-red.png'></image>
     <view class='hot-name-text'>{{productList[0].name}}</view>
@@ -8,7 +9,7 @@
   </view>
   <image class='hot-goods' src="{{productList[0].image}}"></image>
   <image class='hot-discount' src='../../images/discount.png'></image>
-</view>
+</navigator> 
 
 <view class='space-bar'>
   <image class='line-black' src='../../images/line-black.png'></image>
@@ -18,13 +19,13 @@
 
 <view class='goods-wrapper'>
   <view class='goods-bList' wx:for="{{productList}}" wx:key="id" wx:if="{{index%2===1}}">
-    <navigator class='goods-sList' wx:for="{{[productList[index],productList[index+1]]}}" wx:key="id">
-      <image class='goods-image' src="{{item.image}}" mode='scaleToFill'></image>
-      <view class='goods-name'>{{item.name}}</view>
+    <navigator class='goods-sList' wx:for="{{[productList[index],productList[index+1]]}}" wx:key="id" url="/pages/detail/detail?id={{item.id}}">
+      <image class='goods-image' src="{{item.image}}" mode='scaleToFill' id="{{item.id}}-image"></image>
+      <view class='goods-name' id="{{item.id}}-name">{{item.name}}</view>
       <view class='goods-label'>
         <view class='rmb'>￥</view>
         <view class='goods-price'>{{item.price}}</view>
-        <view class='goods2trolley'>+</view>
+        <view class='goods2trolley' id="{{item.id}}-add">+</view>
       </view>
     </navigator>
   </view>

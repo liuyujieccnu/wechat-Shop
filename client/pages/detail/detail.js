@@ -1,18 +1,63 @@
 // pages/detail/detail.js
+const qcloud = require('../../vendor/wafer2-client-sdk/index.js');
+const config = require('../../config.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    productID:"",
+    imageAddress:"",
+    productName:"",
+    productPrice:"",
+    productSource:"",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      productID:options.id,
+    });
+    this.getProductDetail();
+  },
+  /**
+   * 获取商品详情信息
+   */
+  getProductDetail(){
+    wx.showLoading({
+      title: '商品数据加载中',
+    });
+    qcloud.request({
+      url: `${config.service.productList}/${this.data.productID}`,
+      success: result => {
+        wx.hideLoading();
+        if (!result.data.code) {
+          //console.log(result.data.data);
+          wx.setNavigationBarTitle({
+            title: result.data.data.name,
+          });
+          this.setData({
+            imageAddress: result.data.data.image,
+            productName: result.data.data.name,
+            productPrice: result.data.data.price,
+            productSource: result.data.data.source,
+          });
+        } else {
+          setTimeout(() => {
+            wx.navigateBack();
+          }, 2000);
+        }
+      },
+      fail: result => {
+        setTimeout(() => {
+          wx.navigateBack();
+        }, 2000);
+      }
+    });
   },
 
   /**

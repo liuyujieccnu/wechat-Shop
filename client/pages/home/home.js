@@ -48,6 +48,18 @@ Page({
       }
     });
   },
+  /**
+   * 点击进入商品详情
+   * 注：可以使用navigator直接挑战，所以注释
+   */
+  // onTapProductDetail:function(event){
+  //   //console.log(event.target.id);
+  //   if (event.target.id.split('-')[1] === 'image' || event.target.id.split('-')[1] === 'name'){
+  //     wx.navigateTo({
+  //       url: `/pages/detail/detail?id=${event.target.id.split('-')[0]}`,
+  //     });
+  //   }
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
