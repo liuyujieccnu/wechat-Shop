@@ -81,6 +81,7 @@ page {
 
   .goods-wrapper{
     margin: 0 50rpx;
+    padding-bottom: 50rpx;
   }
   
   .goods-bList{

@@ -1,2 +1,43 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='product-card'>
+  <image class='product-image' src="https://product-1257864644.cos.ap-shanghai.myqcloud.com/product2.jpg" mode='aspectFit'></image>
+  <view class='product-name'>商品</view>
+  <view class='product-place'>国内·广东</view>
+  <view class='product-label'>
+    <view class='rmb'>￥</view>
+    <view class='product-price'>480.5</view>
+  </view>
+</view>
+
+<view class='ser-eval'>
+
+  <view class='ser'>
+    <view id='ser01' class='ser-detail'>
+      <image class='ser-check' src='../../images/check-yellow.png'></image>
+      <view class='ser-text'>7天免费退货</view>
+    </view>
+    <view id='ser02' class='ser-detail'>
+      <image class='ser-check' src='../../images/check-yellow.png'></image>
+      <view class='ser-text'>24小时内发货并配送运费险</view>
+    </view>
+  </view>
+
+  <view class='eval'>
+    <view class='eval-top'>
+      <view class='eval-title'>已买评价</view>
+      <view class='eval-number'>1条</view>
+      <image class='more-img' src='../../images/grey-arrow.png'></image>
+    </view>
+
+    <view class='eval-detail'>
+      <view class='eval-text' id='eval01'>"test"</view>
+    </view>
+
+  </view>
+
+</view>
+
+<view class='opreation'>
+  <view class='add2trolley'>加入购物车</view>
+  <view class='buynow'>立即购买</view>
+</view>
