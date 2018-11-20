@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo:{
+      nickName:"测试用户"
+    },
   },
 
   /**
@@ -13,6 +15,18 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  onTapOptions:function(event){
+    if(event.target.id==="set-address"){
+      wx.showToast({
+        title: '功能暂未开放',
+      });
+    } else if (event.target.id === "contact-ser"){
+      wx.showToast({
+        title: '功能暂未开放',
+      });
+    }
   },
 
   /**

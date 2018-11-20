@@ -1,2 +1,30 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<image class='bg' src='../../images/bg.png'></image>
+
+<view class='unlogin' wx:if="{{!userInfo}}">
+  <view class='unlogin-info'>
+    <view class='unlogin-portrait'></view>
+    <view class='unlogin-tip'>
+      <view class='unlogin-text1'>未登录</view>
+      <view class='unlogin-text2'>点击微信登录后可方便购物</view>
+    </view>
+  </view>
+  <view class='unlogin-loginbtn'>微信登录</view>
+</view>
+
+<view class='login' wx:else>
+  <view class='login-user-info'>
+    <view class='login-user-portrait'></view>
+    <view class='login-user-name'>{{userInfo.nickName}}</view>
+  </view>
+  <view class='login-function' bindtap='onTapOptions'>
+    <view class='options' >
+      <view class='options-text' id='set-address'>收货地址</view>
+      <image class="arrow" id='set-address' src='../../images/grey-arrow.png'></image>
+    </view>
+    <view class='options'>
+      <view class='options-text' id="contact-ser">联系客服</view>
+      <image class="arrow" src='../../images/grey-arrow.png' id="contact-ser"></image>
+    </view>
+  </view>
+</view>
